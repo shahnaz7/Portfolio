@@ -1,0 +1,257 @@
+[gd_scene load_steps=10 format=3 uid="uid://dj3b8pd068n7r"]
+
+[ext_resource type="Script" uid="uid://c6lsurciyv2ly" path="res://Scenes/main_menu.gd" id="1_l3q8a"]
+[ext_resource type="Texture2D" uid="uid://oql1j2j5rj2v" path="res://Portfolio/Assets/Background.png" id="2_6y3jk"]
+[ext_resource type="Texture2D" uid="uid://c2djqvbsthe05" path="res://Portfolio/Assets/Game1.png" id="3_agl3q"]
+[ext_resource type="Texture2D" uid="uid://dq44cc8n4kfjs" path="res://Portfolio/Assets/Game2.png" id="4_u3enr"]
+[ext_resource type="Texture2D" uid="uid://b0exfdjrg278t" path="res://Portfolio/Assets/Game3.png" id="5_stuow"]
+[ext_resource type="Texture2D" uid="uid://f0cpugk2em1l" path="res://Portfolio/Assets/Game4.png" id="6_kwfyk"]
+[ext_resource type="Texture2D" uid="uid://n7m8ms763hix" path="res://Assets/Game5.png" id="7_6y3jk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l3q8a"]
+line_spacing = 10.0
+font_size = 45
+font_color = Color(0.87058824, 0.4392157, 0.8784314, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6y3jk"]
+line_spacing = 10.0
+font_size = 19
+font_color = Color(0.83939224, 0.5335361, 0.22067988, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3q8a")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6y3jk")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 140
+theme_override_constants/margin_top = 140
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/MainContainer"]
+layout_mode = 2
+
+[node name="GameList" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Game1Box" type="HBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box"]
+custom_minimum_size = Vector2(300, 180)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("3_agl3q")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InfoContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box/InfoContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Cat and Crochet"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box/InfoContainer"]
+layout_mode = 2
+text = "A 2D game mainly for kids to play and very calming and relaxing game."
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box/InfoContainer"]
+layout_mode = 2
+text = "Play Game 1"
+
+[node name="Game2Box" type="HBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box"]
+custom_minimum_size = Vector2(300, 180)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("4_u3enr")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InfoContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box/InfoContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Into the Forest"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box/InfoContainer"]
+layout_mode = 2
+text = "A 3D exploration project demonstrating environment design, interior spaces, lighting, and player navigation."
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box/InfoContainer"]
+layout_mode = 2
+text = "Play Game 2"
+
+[node name="Game3Box" type="HBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box"]
+custom_minimum_size = Vector2(300, 180)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("5_stuow")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InfoContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box/InfoContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Prison Guard Patrol"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box/InfoContainer"]
+layout_mode = 2
+text = "A 3D minigame where a prison guard patrols an outdoor area. The guard uses basic AI to detect and chase the player."
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box/InfoContainer"]
+layout_mode = 2
+text = "Play Game 3"
+
+[node name="Game4Box" type="HBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box"]
+custom_minimum_size = Vector2(300, 180)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("6_kwfyk")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InfoContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box/InfoContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Fairy Forest Walk"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box/InfoContainer"]
+layout_mode = 2
+text = "A peaceful 3D environment where a fairy explores the forest and interacts with the surroundings."
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box/InfoContainer"]
+layout_mode = 2
+text = "Play Game 4"
+
+[node name="Game5Box" type="HBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box"]
+custom_minimum_size = Vector2(300, 180)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("7_6y3jk")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="InfoContainer" type="VBoxContainer" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box/InfoContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "The Obstacle Run"
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box/InfoContainer"]
+layout_mode = 2
+text = "A starter project demonstrating basic 3D movement, collisions, and simple environment interaction."
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box/InfoContainer"]
+layout_mode = 2
+text = "Play Game 5"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -128.5
+offset_right = 128.5
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "My Game Portfolio"
+label_settings = SubResource("LabelSettings_l3q8a")
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "MADE BY SHAHNAZ PAINDAZADA"
+label_settings = SubResource("LabelSettings_6y3jk")
+horizontal_alignment = 1
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "Quit"
+
+[connection signal="pressed" from="CanvasLayer/MainContainer/ScrollContainer/GameList/Game1Box/InfoContainer/Play" to="." method="_on_play_First_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainContainer/ScrollContainer/GameList/Game2Box/InfoContainer/Play" to="." method="_on_play_Second_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainContainer/ScrollContainer/GameList/Game3Box/InfoContainer/Play" to="." method="_on_play_Third_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainContainer/ScrollContainer/GameList/Game4Box/InfoContainer/Play" to="." method="_on_play_Fourth_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainContainer/ScrollContainer/GameList/Game5Box/InfoContainer/Play" to="." method="_on_play_Fifth_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

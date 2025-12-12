@@ -1,0 +1,37 @@
+SUBMISSION #1 – Game Portfolio 
+
+
+1. How to access my portfolio build
+
+My current portfolio build is included in the attached ZIP file:
+
+    Portfolio_Build_Windows.zip
+
+To open it:
+1. Extract the ZIP file.
+2. Open Godot 4 and import the project folder.
+
+The portfolio is still in progress and not all features are complete.
+
+2. What is currently working 
+- Portfolio main menu loads correctly.
+- Basic UI layout is implemented.
+- A scroll system is added for navigating multiple games.
+- Four game entries (Game 1–4) are displayed in the menu.
+- Buttons are connected to launch external EXE game builds.
+- Basic fade-out transition is partially implemented.
+- One EXE is successfully launches from the portfolio.
+
+3. What is still incomplete
+- Improve UI alignment, spacing, and overall visuals.
+- Fix fade-out animation to behave correctly when launching games.
+- Add optional fade-in or additional transition polish.
+- Complete scene linking and portfolio integration for all games.
+- Add code organization improvements (Objective 7).
+- Add documented playtesting (Objective 8).
+- Add source control + issue tracking (GitHub + Trello) for Submission #2.
+
+
+4. Source code access
+- GitHub repository will be available in Submission #2.
+
